@@ -19,6 +19,8 @@ in order to parse the output's contents.
 
 The script should set up automatically and download the zipped data set in your current working directory. It will then create a new sub-folder called "/UCI HAR\_new" and extract in there the relevant data set files. It will then set "/UCI HAR\_new" as your new working directory.
 
+If you don't have Internet access/don't wish to download the file/have read very carefully the course project marking guidelines ("The code should have a file run_analysis.R in the main directory that can be run as long as the Samsung data is in your working directory"), you can also run run\_analysis.R by putting all the data set .txt files into your working directory and commenting out Step 0 of the script.
+
 ###Script outline (Steps 1-6 in run_analysis.R)
 
 I have tried to closely follow the order provided in the [project instructions](https://class.coursera.org/getdata-013/human_grading/view/courses/973500/assessments/3/submissions). Each section of the script corresponds to a step in the instructions.

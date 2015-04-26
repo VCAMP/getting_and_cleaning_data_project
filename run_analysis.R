@@ -2,7 +2,10 @@
 
 ## Step 0: Getting the data, extracting the relevant files and setting up the 
 ## work directory in the folder where the files have been unzipped. Note that 
-## unzip() will automatically create a new destination directory if necessary. ##
+## unzip() will automatically create a new destination directory if necessary. If you
+## don't have Internet access but have all relevant data set files extracted in your
+## working directory, you can comment out this section of the script to make it run. ##
+
 
 download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", destfile="initial_data_set.zip")
 

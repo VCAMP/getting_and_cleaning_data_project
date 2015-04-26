@@ -157,7 +157,7 @@ The data has been shaped into a [tidy](http://www.jstatsoft.org/v59/i10/paper) (
 
 ###Variables
 
-NB all variables apart from "subject" and "activity" have been obtained by taking the average value across each subject and activiy of each relevant measurement.
+NB all variables apart from "subject" and "activity" have been summarised by taking the average value across each subject and activiy of each relevant measurement. The unit of measure for these variables is not explicitly stated in the readme files of the original data set, but we can assume it's [g](http://en.wikipedia.org/wiki/G-force).
 
 * subject
 
