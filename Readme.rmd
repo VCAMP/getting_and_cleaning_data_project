@@ -1,0 +1,44 @@
+---
+title: "Readme.rmd"
+date: "Sunday, April 26, 2015"
+output: html_document
+---
+
+###Reading the script output
+
+The output has been produced with write.table(). It should be sufficient to use
+
+```
+read.table("Samsung_Data.txt", header=TRUE, check.names=FALSE)
+```
+
+
+in order to parse the output's contents.
+
+###Script setup - obtaining the data set files (Step 0 in run_analysis.R)
+
+The script should set up automatically and download the zipped data set in your current working directory. It will then create a new sub-folder called "/UCI HAR\_new" and extract in there the relevant data set files. It will then set "/UCI HAR\_new" as your new working directory.
+
+###Script outline (Steps 1-6 in run_analysis.R)
+
+I have tried to closely follow the order provided in the [project instructions](https://class.coursera.org/getdata-013/human_grading/view/courses/973500/assessments/3/submissions). Each section of the script corresponds to a step in the instructions.
+
+* Step 1: Merging the training and the test sets to create one data set
+
+The script reads all the relevant files with read.table() and merges them in the correct order with rbind() and cbind().
+
+* Step 2: Extracting only the measurements on the mean and standard deviation for each measurement
+
+The script creates a logical vector that assigns 'TRUE' to all names from "features.txt" containing either "std()" or "mean()". It then uses the vector to subset the columns of the rebuilt data frame.
+
+* Step 3: Using descriptive activity names to name the activities in the data set
+
+The script replaces the factor levels in the activity column in the rebuilt data frame with the corresponding names from the activity_labels.txt file.
+
+* Step 4: Appropriately labelling the data set with descriptive variable names
+
+The script renames the measurement variables in the rebuilt data frame by using the corresponding names from the features.txt file. It then makes the names (slightly more) human-readable using string substitution.
+ 
+* Step 5: From the data set in step 4, the script creates a second, independent tidy data set with the average of each variable for each activity and each subject
+
+Here I've used reshape2 in order to create a "wide", tidy data frame; I've also added the code to create a "long", tidy data frame (commented out in section 5a).
